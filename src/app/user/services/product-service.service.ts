@@ -12,11 +12,11 @@ export class ProductServiceService {
 
 
   getProducts(category:string){
-    return this.http.get("http://localhost:8080/api/v1/product/getProducts/"+category)
+    return this.http.get("https://productservice1-ehtlmx8a.b4a.run/api/v1/product/getProducts/"+category)
   }
 
 
   getProductsByProductIdAndCatogery(category:string,productId:string){
-    return this.http.get("http://localhost:8080/api/v1/product/getProduct/" + category+"/"+productId)
+    return this.http.get("https://productservice1-ehtlmx8a.b4a.run/api/v1/product/getProduct/" + category+"/"+productId)
   }
 }

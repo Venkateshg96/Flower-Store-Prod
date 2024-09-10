@@ -44,7 +44,7 @@ export class ProductlistComponent implements OnInit{
       this.categoryName=params.get('categoryId')||''
       const categoryId = params.get('categoryId')||''
       console.log(categoryId)
-      this.http.get("http://localhost:8080/api/v1/product/getProducts/"+categoryId).subscribe((data:any) =>{
+      this.http.get("https://productservice1-ehtlmx8a.b4a.run/api/v1/product/getProducts/"+categoryId).subscribe((data:any) =>{
       this.productList=data
       this.allProductList=data.length
       })
