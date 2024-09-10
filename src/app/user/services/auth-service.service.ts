@@ -13,7 +13,7 @@ export class AuthServiceService {
 
 
 
-  authServiceEndpoint:string = "http://localhost:8081/api/v1/userservice";
+  authServiceEndpoint:string = "https://userservice2-qn1t4dzs.b4a.run/api/v1/userservice";
 
 
   constructor(private http: HttpClient) { }

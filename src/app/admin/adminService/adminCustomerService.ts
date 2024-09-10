@@ -12,7 +12,7 @@ export class adminCustomerService{
         private router:Router) { }
 
     getAllCustomers(){
-        return this.http.get("http://localhost:8088/api/v1/admin/userservice/getAllUsers")
+        return this.http.get("https://userservice2-qn1t4dzs.b4a.run/api/v1/admin/userservice/getAllUsers")
     }
 
 

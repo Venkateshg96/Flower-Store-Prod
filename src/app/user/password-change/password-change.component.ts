@@ -39,9 +39,9 @@ export class PasswordChangeComponent implements OnInit{
   updatePassword(){
     this.User.email=this.changePasswordForm.get('email')!.value;
     this.User.password=this.changePasswordForm.get('password')!.value;
-    this.http.post("http://localhost:8081/api/v1/userservice/loginForUpdate",this.User).subscribe(res =>{
+    this.http.post("https://userservice2-qn1t4dzs.b4a.run/api/v1/userservice/loginForUpdate",this.User).subscribe(res =>{
       this.User.password=this.changePasswordForm.get('newPassword')!.value;
-      this.http.put("http://localhost:8081/api/v1/userservice/updatePassword",this.User).subscribe(r =>{
+      this.http.put("https://userservice2-qn1t4dzs.b4a.run/api/v1/userservice/updatePassword",this.User).subscribe(r =>{
         console.log(r)
         this.msg="Password Updated Sucessfully"
 
