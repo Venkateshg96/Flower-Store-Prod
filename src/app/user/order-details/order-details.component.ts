@@ -17,7 +17,7 @@ export class OrderDetailsComponent {
     this.route.paramMap.subscribe(params => {
       const orderId = params.get('orderId')||''
       console.log(orderId)
-      this.http.get("http://localhost:8084/api/v1/order/getProduct/"+orderId).subscribe((res:any) =>{
+      this.http.get("https://orderservice1-ookbjhga.b4a.run/api/v1/order/getProduct/"+orderId).subscribe((res:any) =>{
       this.productList.push( res)
     console.log(this.productList)
     })

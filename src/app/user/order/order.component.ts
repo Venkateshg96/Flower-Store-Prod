@@ -21,7 +21,7 @@ export class OrderComponent implements OnInit{
     
 
     ngOnInit() {
-      this.http.get("http://localhost:8084/api/v1/order/getProducts").subscribe((res:any) =>{
+      this.http.get("https://orderservice1-ookbjhga.b4a.run/api/v1/order/getProducts").subscribe((res:any) =>{
         this.productList.push(res.sort((a: { orderDate: string; }, b: { orderDate: any; }) => {
           return  b.orderDate.localeCompare(a.orderDate);
         }))

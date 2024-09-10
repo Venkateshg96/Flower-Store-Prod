@@ -57,7 +57,7 @@ export class ProductlistComponent implements OnInit{
 
   addToCart(productId:number,pdouctCatogory:string){
     this.cart= new Cart(productId,pdouctCatogory);
-    this.http.post("http://localhost:8083/api/v1/cart/addToCart",this.cart).subscribe(res =>{
+    this.http.post("https://cartservice1-r074e495.b4a.run/api/v1/cart/addToCart",this.cart).subscribe(res =>{
       this.toastr.success("Product Added to Cart")
       setTimeout(() => {
         window.location.reload();

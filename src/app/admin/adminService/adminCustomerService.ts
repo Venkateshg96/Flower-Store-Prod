@@ -17,6 +17,6 @@ export class adminCustomerService{
 
 
     getAllOrders(){
-        return this.http.get("http://localhost:8088/api/v1/admin/order/getAllUsersOrders")
+        return this.http.get("https://adminservice-u50362uv.b4a.run/api/v1/admin/order/getAllUsersOrders")
     }
 }

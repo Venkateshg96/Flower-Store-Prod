@@ -12,20 +12,20 @@ export class adminProductService {
 
 
     getProducts(){
-        return this.http.get("http://localhost:8088/api/v1/admin/product/getAllProducts/all")
+        return this.http.get("https://adminservice-u50362uv.b4a.run/api/v1/admin/product/getAllProducts/all")
     }
 
     saveProduct(product:any){
-      return this.http.post("http://localhost:8088/api/v1/admin/product/addProduct",product)
+      return this.http.post("https://adminservice-u50362uv.b4a.run/api/v1/admin/product/addProduct",product)
     }
 
     deleteProductById(productId:number){
-      return this.http.delete("http://localhost:8088/api/v1/admin/product/delete/"+productId)
+      return this.http.delete("https://adminservice-u50362uv.b4a.run/api/v1/admin/product/delete/"+productId)
 
     }
 
     editProduct(editedProduct:any){
-      return this.http.put("http://localhost:8088/api/v1/admin/product/update",editedProduct)
+      return this.http.put("https://adminservice-u50362uv.b4a.run/api/v1/admin/product/update",editedProduct)
     }
 
 }

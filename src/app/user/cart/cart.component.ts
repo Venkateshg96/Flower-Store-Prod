@@ -102,7 +102,7 @@ export class CartComponent implements OnInit{
   
 
   updateCartProductQuantity(cartItem:any){
-    this.http.put("http://localhost:8083/api/v1/cart/updateCart",cartItem).subscribe(res =>{
+    this.http.put("https://cartservice1-r074e495.b4a.run/api/v1/cart/updateCart",cartItem).subscribe(res =>{
       console.log(res)
     })
   }

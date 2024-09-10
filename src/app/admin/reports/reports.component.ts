@@ -48,7 +48,7 @@ export class ReportsComponent  implements OnInit{
   graphForSales(){
     this.inventory=false
     this.salesGraph=true
-    this.http.get("http://localhost:8088/api/v1/admin/order/getAllUsersOrders").subscribe(res =>{
+    this.http.get("https://adminservice-u50362uv.b4a.run/api/v1/admin/order/getAllUsersOrders").subscribe(res =>{
       this.orderData=res
       const orderDates = this.orderData.map((order:any) => new Date(order.orderDate));
 

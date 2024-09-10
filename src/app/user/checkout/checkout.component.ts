@@ -104,7 +104,7 @@ export class CheckoutComponent implements OnInit{
        console.log(this.order)
        
 
-       this.http.post("http://localhost:8084/api/v1/order/placeOrder",this.order).subscribe(res =>{
+       this.http.post("https://orderservice1-ookbjhga.b4a.run/api/v1/order/placeOrder",this.order).subscribe(res =>{
         this.placingOrder = true;
 
        setTimeout(() => {
@@ -112,7 +112,7 @@ export class CheckoutComponent implements OnInit{
         this.router.navigate(['/shop/ordersucess'])
       }, 4000);
         
-        this.http.delete("http://localhost:8083/api/v1/cart/deleteAll").subscribe(res =>{
+        this.http.delete("https://cartservice1-r074e495.b4a.run/api/v1/cart/deleteAll").subscribe(res =>{
         },err =>{
           this.toastr.error("Something went wrong")
         })

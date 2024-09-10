@@ -72,7 +72,7 @@ export class AdminDashboardComponent implements OnInit{
     const isConfirmed = window.confirm("Are you sure you want to delete?");
     if (isConfirmed) {
     this.adminproductService.deleteProductById(productId).subscribe(res =>{
-      this.http.delete("http://localhost:8083/cart/deleteAllByProductId/"+productId)
+      this.http.delete("https://cartservice1-r074e495.b4a.run/api/v1/cart/deleteAllByProductId/"+productId)
       this.toastr.success("Product Deleted Sucessfully")
       this.ngOnInit()
     },err =>{

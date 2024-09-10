@@ -17,15 +17,15 @@ export class CartServiceService {
   
 
     getProductsFromCart(){
-       return this.http.get("http://localhost:8083/api/v1/cart/getProducts")
+       return this.http.get("https://cartservice1-r074e495.b4a.run/api/v1/cart/getProducts")
     }
 
 
     addToCart(cart:any){
-      return this.http.post("http://localhost:8083/api/v1/cart/addToCart",cart)
+      return this.http.post("https://cartservice1-r074e495.b4a.run/api/v1/cart/addToCart",cart)
       
     }
     deleteByProductIdAndEmail(productId:number){
-      return this.http.delete("http://localhost:8083/api/v1/cart/delete/"+productId)
+      return this.http.delete("https://cartservice1-r074e495.b4a.run/api/v1/cart/delete/"+productId)
     }
 }
